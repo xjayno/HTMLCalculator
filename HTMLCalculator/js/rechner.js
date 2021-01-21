@@ -32,13 +32,12 @@
         //dot
         keys.querySelectorAll('.dot.btn').forEach(element => {
             element.onclick = function () {
-                if (input.value == null) {
-                    input.value += "0";
-                    input.value += element.value;
-                } else {
+                if (input.value) {
                     if (!input.value.includes('.')) {
                         input.value += element.value;
                     }
+                } else {
+                    input.value += '0' + element.value;
                 }
             }
         });
