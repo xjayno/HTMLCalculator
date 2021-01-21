@@ -14,7 +14,7 @@
         let input = display.querySelector('.display');
         let equationvalue = equation.querySelector('.equation');
 
-        //Nummern
+        //numbers
         keys.querySelectorAll('.number.btn').forEach(element => {
             element.onclick = function () {
                 input.value += element.value;
@@ -89,6 +89,7 @@
                         break;
                 }
                 if (value) {
+                    value = value.toFixed(2);
                     input.value = value;
                 }
                 equationvalue.value = null;
