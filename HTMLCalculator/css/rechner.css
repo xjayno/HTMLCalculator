@@ -1,6 +1,6 @@
 #taschenrechner {
-    width: 395px;
-    height: 325px;
+    width: 195px;
+    height: 265px;
     background-color: rgba(60, 50, 80, 150);
 }
 
@@ -15,7 +15,7 @@
 
 .equation input[type=text] {
     height: 20px;
-    width: 370px;
+    width: 170px;
     float: left;
     border: 0;
     color: antiquewhite;
@@ -36,14 +36,14 @@
 }
 
 .display input[type=text] {
-    height: 50px;
-    width: 370px;
+    height: 40px;
+    width: 170px;
     float: left;
     border: 0;
     background: rgb(181, 183, 212);
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 10vh;
     text-align: right;
 }
@@ -57,8 +57,8 @@
 }
 
 .btn {
-    height: 40px;
-    width: 90px;
+    height: 30px;
+    width: 40px;
     float: left;
     color: white;
     text-align: center;
@@ -68,7 +68,7 @@
     margin-bottom: 5px;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 15px;
+    border: 0;
 }
 
 .btn:focus {
@@ -77,34 +77,41 @@
 
 .btn.number {
     background-color: gray;
+    border-radius: 20px;
 }
 
 .btn.operation {
     background-color: mediumvioletred;
+    border-radius: 15px;
 }
 
 .btn.del {
     background-color: aqua;
     color: black;
+    border-radius: 10px;
 }
 
 .btn.c {
     background-color: aqua;
     color: black;
+    border-radius: 10px;
 }
 
 .btn.ce {
     background-color: aqua;
     color: black;
+    border-radius: 10px;
 }
 
 .btn.dot {
     background-color: gray;
+    border-radius: 20px;
 }
 
 .btn.equals {
-    width: 185px;
-    background-color: rgb(130, 48, 81);
+    width: 85px;
+    background-color: red;
+    border: black 1px;
 }
 
 .btn:hover {
