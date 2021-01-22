@@ -5,20 +5,21 @@ body {
 
 #taschenrechner {
     width: 195px;
-    height: 325px;
-    background-color: white;
+    height: 320px;
+    background-color: whitesmoke;
     /*rgb(106, 55, 135)*/
     margin: 400px auto auto;
-    border-radius: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 #taschenrechner img {
     margin-left:5px;
-    margin-top:5px;
+    margin-top:7px;
     width: 90%;
     height: 15%;
 }
 .equation {
-    margin-top: 7px;
+    margin-top: 5px;
     margin-left: 5px;
 }
 
@@ -34,7 +35,8 @@ body {
     color: white;
     font-weight: bold;
     font-size: 12px;
-    background: rgb(181, 183, 212);
+    /*background: rgb(181, 183, 212);*/
+    background-color: darkgray;
     line-height: 10vh;
     text-align: right;
 }
@@ -53,7 +55,7 @@ body {
     width: 170px;
     float: left;
     border: 0;
-    background: rgb(181, 183, 212);
+    background-color: darkgray;
     color: white;
     font-weight: bold;
     font-size: 16px;
