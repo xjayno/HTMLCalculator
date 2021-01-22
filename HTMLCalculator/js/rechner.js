@@ -1,10 +1,7 @@
 (function () {
     window.onload = function () {
-        //Cache for first value
-        let value = null;
         //Saving operator
         let operation = null;
-
         //Boolean to clear input after Calculation has been done
         let isCalculated = false;
 
@@ -17,11 +14,10 @@
         let equationvalue = equation.querySelector('.equation');
 
 
-
         //numbers
         keys.querySelectorAll('.number.btn').forEach(element => {
             element.onclick = function () {
-                if(isCalculated === true){
+                if (isCalculated === true) {
                     input.value = null;
                     isCalculated = false;
                 }
@@ -37,6 +33,7 @@
                 input.value = null;
             }
         });
+
         //dot
         keys.querySelectorAll('.dot.btn').forEach(element => {
             element.onclick = function () {
@@ -78,6 +75,7 @@
             element.onclick = function () {
                 let firstvalue = parseFloat(equationvalue.value.substr(0, equationvalue.value.length - 1));
                 let secondvalue = parseFloat(input.value);
+                let value = null;
                 switch (operation) {
                     case "+":
                         value = firstvalue + secondvalue;
@@ -96,12 +94,18 @@
                         break;
                 }
                 if (value) {
-                    value = value.toFixed(2);
-                    input.value = value;
                     isCalculated = true;
+                    if (isOdd(value) === 0) {
+                        input.value = value;
+                    } else {
+                        input.value = value.toFixed(2);
+                    }
                 }
                 equationvalue.value = null;
             }
         });
     };
+    function isOdd(num) {
+        return num % 2;
+    }
 }())
