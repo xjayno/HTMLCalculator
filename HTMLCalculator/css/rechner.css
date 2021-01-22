@@ -7,7 +7,10 @@
 .equation {
     margin-top: 10px;
     margin-left: 5px;
+}
 
+.equation:focus {
+    outline: 0;
 }
 
 .equation input[type=text] {
@@ -18,7 +21,7 @@
     color: antiquewhite;
     font-weight: bold;
     font-size: 12px;
-    background: rgb(181,183,212);
+    background: rgb(181, 183, 212);
     line-height: 10vh;
     text-align: right;
 }
@@ -28,12 +31,16 @@
     margin-right: 5px;
 }
 
+.display:focus {
+    outline: 0;
+}
+
 .display input[type=text] {
     height: 50px;
     width: 370px;
     float: left;
     border: 0;
-    background: rgb(181,183,212);
+    background: rgb(181, 183, 212);
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -61,6 +68,11 @@
     margin-bottom: 5px;
     font-size: 16px;
     font-weight: bold;
+    border-radius: 15px;
+}
+
+.btn:focus {
+    outline: 0;
 }
 
 .btn.number {
@@ -92,7 +104,7 @@
 
 .btn.equals {
     width: 185px;
-    background-color: rgb(130,48,81);
+    background-color: rgb(130, 48, 81);
 }
 
 .btn:hover {

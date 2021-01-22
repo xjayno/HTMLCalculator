@@ -5,6 +5,8 @@
         //Saving operator
         let operation = null;
 
+        //Boolean to clear input after Calculation has been done
+        let isCalculated = false;
 
         let root = document.getElementById("taschenrechner");
         let display = root.querySelector(".display");
@@ -14,9 +16,15 @@
         let input = display.querySelector('.display');
         let equationvalue = equation.querySelector('.equation');
 
+
+
         //numbers
         keys.querySelectorAll('.number.btn').forEach(element => {
             element.onclick = function () {
+                if(isCalculated === true){
+                    input.value = null;
+                    isCalculated = false;
+                }
                 input.value += element.value;
             }
         });
@@ -70,7 +78,6 @@
             element.onclick = function () {
                 let firstvalue = parseFloat(equationvalue.value.substr(0, equationvalue.value.length - 1));
                 let secondvalue = parseFloat(input.value);
-
                 switch (operation) {
                     case "+":
                         value = firstvalue + secondvalue;
@@ -91,6 +98,7 @@
                 if (value) {
                     value = value.toFixed(2);
                     input.value = value;
+                    isCalculated = true;
                 }
                 equationvalue.value = null;
             }
