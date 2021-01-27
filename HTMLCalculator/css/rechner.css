@@ -153,7 +153,7 @@ body {
 }
 
 .btn.del {
-    background-image: url("del.png");
+    background-image: url("assets/del.png");
     background-size: 25px 25px;
     background-repeat: no-repeat;
     background-position: center;
@@ -187,16 +187,4 @@ body {
 .btn:hover {
     color: black;
     background-color: rgba(255, 255, 255, 0.3);
-}
-
-/*hiding scrollbar of display input for Chrome, Safari, Edge and Opera*/
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/*The same for Firefox*/
-input[type=number] {
-    -moz-appearance: textfield;
 }
