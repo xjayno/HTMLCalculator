@@ -69,11 +69,6 @@
                         default:
                             result = parseFloat(input.value);
                     }
-                    // if (isOdd(result) === 0) {
-                    //     input.value = result;
-                    // } else {
-                    //     input.value = result.toFixed(2);
-                    // }
                     if(hasdecimals(result.toString())){
                         input.value = result.toFixed(2);
                     }else {
