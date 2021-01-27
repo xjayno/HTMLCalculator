@@ -44,8 +44,8 @@ body {
 
 
 #taschenrechner {
-    width: 195px;
-    height: 315px;
+    width: 210px;
+    height: 350px;
     background-color: whitesmoke;
     border: 1px solid black;
     border-radius: 10px;
@@ -55,24 +55,20 @@ body {
 }
 
 #taschenrechner img {
-    margin-left: 5px;
+    margin-left: 10px;
     margin-top: 7px;
     width: 90%;
     height: auto;
 }
 
-.equation {
-    margin-top: 5px;
-    margin-left: 5px;
+.display{
+    overflow: hidden;
 }
 
-.equation:focus {
-    outline: 0;
-}
 
-.equation input[type=text] {
-    height: 20px;
-    width: 170px;
+.equation-Input{
+    height: 30px;
+    width: 185px;
     float: left;
     border: 0;
     color: white;
@@ -80,21 +76,21 @@ body {
     font-size: 12px;
     background-color: darkgray;
     line-height: 10vh;
+    margin-left: 10px;
     text-align: right;
+    border-radius: 5px 5px 0 0;
+    cursor: default;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
-
-.display {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.display:focus {
+.equation-Input:focus {
     outline: 0;
 }
 
-.display input[type=text] {
-    height: 30px;
-    width: 170px;
+.display-Input{
+    height: 40px;
+    width: 185px;
     float: left;
     border: 0;
     background-color: darkgray;
@@ -102,20 +98,31 @@ body {
     font-weight: bold;
     font-size: 16px;
     line-height: 10vh;
+    margin-left: 10px;
+    margin-right: 5px;
     text-align: right;
+    border-radius: 0 0 5px 5px;
+    cursor: default;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+.display-Input:focus {
+    outline: 0;
 }
 
 .keys {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 5px;
     margin-right: 5px;
     float: left;
     border: 0;
+    overflow: hidden;
 }
 
 .btn {
     height: 30px;
-    width: 40px;
+    width: 43px;
     float: left;
     color: white;
     text-align: center;
@@ -170,7 +177,7 @@ body {
 }
 
 .btn.equals {
-    width: 85px;
+    width: 90px;
     background-color: slategray;
     border-radius: 5px;
 }

@@ -2,19 +2,16 @@
     window.onload = function () {
         //Saving operator
         let operation = null;
-
+        //Cache for first value
         let value = null;
         //Boolean to clear input after Calculation has been done
         let isCalculated = false;
 
-
         let root = document.getElementById("taschenrechner");
-        let display = root.querySelector(".display");
-        let equation = root.querySelector(".equation");
-        let keys = root.querySelector('.keys');
 
-        let input = display.querySelector('.display');
-        let equationvalue = equation.querySelector('.equation');
+        let input = root.querySelector('.display-Input');
+        let equationvalue = root.querySelector('.equation-Input');
+        let keys = root.querySelector('.keys');
 
         keys.addEventListener("click", function (event) {
             if (event.target.classList.contains('number')) {
@@ -45,9 +42,10 @@
                     equationvalue.value = null;
                     operation = null;
                     value = null;
-                } else {
-                    input.value = null;
                 }
+            }
+            if (event.target.classList.contains('ce')) {
+                input.value = null;
             }
             if (event.target.classList.contains('del')) {
                 input.value = input.value.substr(0, input.value.length);
@@ -71,11 +69,17 @@
                         default:
                             result = parseFloat(input.value);
                     }
-                    if (isOdd(result) === 0) {
-                        input.value = result;
-                    } else {
+                    // if (isOdd(result) === 0) {
+                    //     input.value = result;
+                    // } else {
+                    //     input.value = result.toFixed(2);
+                    // }
+                    if(hasdecimals(result.toString())){
                         input.value = result.toFixed(2);
+                    }else {
+                        input.value = result;
                     }
+                    isCalculated = true;
                     equationvalue.value = null;
                 }
             }
@@ -83,18 +87,14 @@
 
     };
 
+    function hasdecimals(str){
+        return str.endsWith(".00");
+    }
+
     //returns 0 if even, 1 if odd
     function isOdd(num) {
         return num % 2;
     }
 
-    function addNumber(input, num, bool) {
-        if (bool === true) {
-            input.value = null;
-            input.value += num.value;
-            bool = false;
-        } else {
-            input.value += num.value;
-        }
-    }
+
 }())
