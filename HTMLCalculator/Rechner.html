@@ -15,10 +15,12 @@
     </div>
 </div>
 <div id="taschenrechner">
-    <img src="assets/hl-services-logo.png">
+    <div class="Logo">
+        <input type="image" src="assets/hl-services-logo.png" tabindex="-1" class="button logo"/>
+    </div>
     <div class="display">
-        <input type="text" class="equation-Input" contenteditable="false">
-        <input type="text" class="display-Input" pattern="[0-9]+([\.,][0-9]+)?" step="1">
+        <input type="text" class="equation-Input" disabled="disabled"/>
+        <input type="text" class="display-Input" pattern="[0-9]+([\.,][0-9]+)?" step="1" disabled="disabled"/>
     </div>
     <div class="keys">
         <button class="btn c" value="c">C</button>

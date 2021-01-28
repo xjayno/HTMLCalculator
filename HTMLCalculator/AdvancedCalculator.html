@@ -15,10 +15,12 @@
     </div>
 </div>
 <div id="taschenrechner">
-    <img src="assets/hl-solutions-logo_blau.png">
+    <div class="Logo">
+        <input type="image" src="assets/hl-solutions-logo_blau.png" class="button logo" tabindex="-1"/>
+    </div>
     <div class="display">
-        <input type="text" class="equation-Input" contenteditable="false">
-        <input type="text" class="display-Input" pattern="[0-9]+([\.,][0-9]+)?" step="1">
+        <input type="text" class="equation-Input" contenteditable="false" disabled="disabled">
+        <input type="text" class="display-Input" pattern="[0-9]+([\.,][0-9]+)?" disabled="disabled">
     </div>
     <div class="keys">
         <button class="btn operation modulo" value="%">%</button>
@@ -29,7 +31,13 @@
         <button class="btn reciprocal" value="reciprocal">1/x</button>
         <button class="btn square" value="square">x²</button>
         <button class="btn root" value="root"></button>
+        <button class="btn operation exponent" value="^">xˣ</button>
+
+        <button class="btn operation log" value="log">log</button>
+        <button class="btn pi" value="pi"></button>
+        <button class="btn faculty" value="faculty">x!</button>
         <button class="btn operation" value="/">/</button>
+
 
         <button class="btn number" value="7">7</button>
         <button class="btn number" value="8">8</button>

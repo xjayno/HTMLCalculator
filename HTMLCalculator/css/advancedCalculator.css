@@ -1,12 +1,52 @@
 body {
     background-color: #bd4f6c;
     background-image: linear-gradient(to right, #bd4f6c 0%, #d7816a 74%);
+}
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+    font-family: monospace;
+}
+
+.dropbtn {
+    position: relative;
+    background-color: slategray;
+    color: white;
+    cursor: pointer;
+    border: 0;
+    width: 60px;
+    height: 20px;
+    right: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    font-size: 10px;
+    padding: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding: 2px 6px;
+}
+
+.dropdown-content a:hover {
+    background-color: cadetblue;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 #taschenrechner {
     width: 300px;
-    height: 550px;
+    height: 575px;
     border: 1px solid darkgray;
     border-radius: 10px;
     font-family: "Agency FB", sans-serif;
@@ -14,26 +54,31 @@ body {
     background-color: whitesmoke;
 }
 
-#taschenrechner img {
+#taschenrechner input[type=image] {
     margin-top: 15px;
     margin-left: 33px;
     height: 60px;
     width: 230px;
+    border: 0;
+    cursor: default;
 }
-
+#taschenrechner input[type=image]:focus{
+    outline: 0;
+}
 
 .display {
     height: 60px;
     width: 230px;
-    margin: 26px 35px 34px 31px;
+    margin: 20px 35px 32px 22px;
     size: auto;
     padding: unset;
 }
 
 .equation-Input {
     height: 35px;
-    width: 230px;
+    width: 250px;
     background-color: darkgray;
+    color: whitesmoke;
     border-radius: 10px 10px 0 0;
     border-top: 1px solid black;
     border-right: 1px solid black;
@@ -41,14 +86,15 @@ body {
     border-bottom: 0;
     text-align: right;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 16px;
     font-family: monospace;
 }
 
 .display-Input {
     height: 45px;
-    width: 230px;
+    width: 250px;
     background-color: darkgray;
+    color: whitesmoke;
     border-radius: 0 0 10px 10px;
     border-top: 0;
     border-right: 1px solid black;
@@ -56,7 +102,7 @@ body {
     border-bottom: 1px solid black;
     text-align: right;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 21px;
     font-family: monospace;
 }
 
@@ -72,29 +118,29 @@ body {
 
 .keys {
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 15px;
     display: inline-block;
 }
 
 .btn {
     height: 40px;
-    width: 52px;
+    width: 60px;
     float: left;
-    margin-left: 10px;
+    margin-left: 5px;
     margin-top: 10px;
     color: black;
     text-align: center;
     cursor: pointer;
-    background-color: gray;
+    background-color: lightgray;
     transition-duration: 0.1s;
     font-size: 16px;
     font-weight: bold;
     border: 0;
-    border-radius: 15px;
-    box-shadow: #0000004a inset 0 0 4px 3px;
+    border-radius: 20px;
+    box-shadow: #0000004a inset 0 0 4px 4px;
 }
 
-.btn:focus{
+.btn:focus {
     outline: 0;
 }
 
@@ -136,7 +182,7 @@ body {
 }
 
 .btn.equals {
-    background-color: darkcyan;
+    background-color: lightcyan;
 }
 
 .btn.operation {
@@ -154,8 +200,29 @@ body {
     border-radius: 15px;
 }
 
-.btn:hover{
-    background-color: lightgray;
+.btn.log {
+    background-color: orange;
+    border-radius: 15px;
+}
+
+.btn.pi {
+    background-image: url("assets/pi.png");
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: orange;
+}
+
+.btn.faculty {
+    background-color: orange;
+}
+
+.btn.exponent {
+    background-color: orange;
+}
+
+.btn:hover {
+    background-color: darkgray;
     color: white;
 }
 

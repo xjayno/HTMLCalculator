@@ -8,18 +8,25 @@
         let isCalculated = false;
 
         let root = document.getElementById("taschenrechner");
-
         let input = root.querySelector('.display-Input');
         let equationvalue = root.querySelector('.equation-Input');
         let keys = root.querySelector('.keys');
+        let logo = root.querySelector('.Logo');
+
+        input.value = '0';
+
+        logo.addEventListener("click", function (event) {
+            window.open("https://hl-services.de/", "_blank");
+        });
 
         keys.addEventListener("click", function (event) {
             if (event.target.classList.contains('number')) {
-                if (isCalculated === true) {
-                    input.value = null;
+                if (isCalculated === true || input.value === '0') {
                     isCalculated = false;
+                    input.value = event.target.value;
+                } else {
+                    input.value += event.target.value;
                 }
-                input.value += event.target.value;
             }
             if (event.target.classList.contains('operation')) {
                 operation = event.target.value;
@@ -69,9 +76,9 @@
                         default:
                             result = parseFloat(input.value);
                     }
-                    if(hasdecimals(result.toString())){
+                    if (hasdecimals(result.toString())) {
                         input.value = result.toFixed(2);
-                    }else {
+                    } else {
                         input.value = result;
                     }
                     isCalculated = true;
@@ -79,10 +86,9 @@
                 }
             }
         }, false);
-
     };
 
-    function hasdecimals(str){
+    function hasdecimals(str) {
         return str.endsWith(".00");
     }
 
